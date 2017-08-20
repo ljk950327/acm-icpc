@@ -1,0 +1,52 @@
+package boj;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Scanner;
+
+public class P7287 {
+
+	public static void main(String[] args) {
+		P7287 p = new P7287();
+		p.init();
+	}
+
+	private void init() {
+		/*
+		 * Get input started..
+		 */
+		try {
+			URL url = new URL("https://www.acmicpc.net/user/ljk950327");
+			URLConnection connection = url.openConnection();
+			connection.addRequestProperty("User-Agent", 
+					"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.29 Safari/537.36");
+			InputStream is = connection.getInputStream();
+//			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+//			BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\output\\file.txt"));
+			Scanner sc = new Scanner(is);
+			String line;
+			
+			while (sc.hasNextLine()) {
+				line=sc.nextLine();
+				if (line.contains("result_id=4")) {
+					int index=line.indexOf("result_");
+					System.out.println(index);
+					break;
+				}
+				//bw.write(line);
+			}
+			//bw.flush();
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		/*
+		 * Get input ended..
+		 */
+	}
+}
+
+

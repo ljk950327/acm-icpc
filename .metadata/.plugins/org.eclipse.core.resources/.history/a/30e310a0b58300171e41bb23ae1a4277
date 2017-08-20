@@ -1,0 +1,18 @@
+package boj;
+
+import java.util.Scanner;
+
+public class P11720 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int sum=0;
+		int count=sc.nextInt();
+		String num=sc.nextLine();
+		for(int i=1;i<=count;i++) {
+			sum+=(int)num.charAt(i);
+			
+		}
+		System.out.println(sum);
+	}
+}

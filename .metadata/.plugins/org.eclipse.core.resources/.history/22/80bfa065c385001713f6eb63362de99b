@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class P10871 {
+
+	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(br.readLine());
+		sb.append(br.readLine());
+		StringTokenizer st = new StringTokenizer(sb.toString());
+		int count=Integer.parseInt(st.nextToken());
+		int fn=Integer.parseInt(st.nextToken());
+		sb.delete(0, 2);
+		while(count>0) {
+			count--;
+			if(Integer.parseInt(st.nextToken())<fn) {
+				sb.append(st.nextToken());
+			}
+		}
+		
+		System.out.println(sb.toString());
+	}
+
+}

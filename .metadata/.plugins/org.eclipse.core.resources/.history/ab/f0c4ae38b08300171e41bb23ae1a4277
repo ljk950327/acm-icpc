@@ -1,0 +1,33 @@
+package boj;
+
+import java.util.Scanner;
+
+public class P1924 {
+
+	public static void main(String[] args) {
+		int[][] cal = new int[12][31];
+		int count=1;
+		int num=31;
+		Scanner sc =new Scanner(System.in);
+		int x = sc.nextInt();
+		int y =sc.nextInt();
+		for(int i=1;i<=x;i++) {
+			
+			for(int j=y;j<=num;j++) {
+				if(i==2) {
+					num=28;
+					cal[i][j]=count++;
+				}else if(i==4||i==6||i==9||i==11) {
+					num=30;
+					cal[i][j]=count++;
+				}else {
+					num=31;
+					cal[i][j]=count++;
+				}
+			}
+		}
+
+		
+	}
+
+}

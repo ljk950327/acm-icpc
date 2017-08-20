@@ -1,0 +1,17 @@
+package boj;
+
+public class P1924 {
+
+	public static void main(String[] args) {
+		int[][] cal = new int[12][31];
+		int count=1;
+		for(int i=1;i<=12;i++) {
+			for(int j=1;j<=31;j++) {
+				if(i==2) {
+					cal[i][j]=j;
+				}
+			}
+		}
+	}
+
+}

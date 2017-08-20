@@ -1,0 +1,56 @@
+package boj;
+
+import java.util.Scanner;
+
+public class P1924 {
+
+	public static void main(String[] args) {
+		int[][] cal = new int[13][32];
+		int count=1;
+		int num=31;
+		Scanner sc =new Scanner(System.in);
+		int x = sc.nextInt();
+		int y =sc.nextInt();
+		for(int i=1;i<=x;i++) {
+			
+			for(int j=1;j<=num;j++) {
+				if(i==2) {
+					num=28;
+					cal[i][j]=count++;
+				}else if(i==4||i==6||i==9||i==11) {
+					num=30;
+					cal[i][j]=count++;
+				}else {
+					num=31;
+					cal[i][j]=count++;
+				}
+			}
+		}
+		int day=cal[x][y]%7;
+		switch (day) {
+		case 1:
+			System.out.println("MON");
+			break;
+		case 2:
+			System.out.println("TUE");
+			break;
+		case 3:
+			System.out.println("WED");
+			break;
+		case 4:
+			System.out.println("THU");
+			break;
+		case 5:
+			System.out.println("FRI");
+			break;
+		case 6:
+			System.out.println("SAT");
+			break;
+		case 0:
+			System.out.println("SUN");
+			break;
+
+		}
+	}
+
+}

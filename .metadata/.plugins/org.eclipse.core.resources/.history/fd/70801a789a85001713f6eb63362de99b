@@ -1,0 +1,57 @@
+package boj;
+
+import java.util.Scanner;
+
+public class P10817 {
+//	public int[] a=new int[4];
+//	public int select(int left, int right, int order) {
+//		if(left==right) return left;
+//		int pivot= Partition(left, right);
+//		int k=pivot-left+1;
+//		if(order==k) {
+//			return pivot;
+//		}else if(order<k) return select(left,pivot-1,order);
+//		else return select(pivot+1,right,order-k);
+//	}
+//	P10817(){
+//		Scanner sc = new Scanner(System.in);
+//		int n1=sc.nextInt();
+//		int n2=sc.nextInt();
+//		int n3=sc.nextInt();
+//		this.a[0]=n1;
+//		this.a[1]=n2;
+//		this.a[2]=n3;
+//	}
+//	private int Partition(int left,int right) {
+//		int j=left;
+//		for(int i=left;i<right;i++) {
+//			if(a[i]<a[right]) {
+//				swap(a[i],a[j++]);
+//			}
+//			
+//		}
+//		swap(a[right],a[j]);
+//		return j;
+//	}
+//	private void swap( int i1, int i2) {
+//		int tmp = a[i1];
+//		a[i1]=a[i2];
+//		a[i2]=tmp;
+//	}
+	
+	
+	public static void main(String[] args) {
+		
+		P10817 p = new P10817();
+		Scanner sc = new Scanner(System.in);
+		int i=0;
+		while(sc.hasNextInt()) {
+			int a[] = new int[i];
+			a[i]=sc.nextInt();
+			i++;
+		
+		}
+		
+	}
+
+}

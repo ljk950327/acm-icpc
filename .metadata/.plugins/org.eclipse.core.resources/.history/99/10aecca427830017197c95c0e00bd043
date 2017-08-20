@@ -1,0 +1,53 @@
+package boj;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Scanner;
+
+public class P7287 {
+
+	public static void main(String[] args) {
+		P7287 p = new P7287();
+		p.init();
+	}
+
+	private void init() {
+		/*
+		 * Get input started..
+		 */
+		try {
+			URL url = new URL("https://www.acmicpc.net/user/ljk950327");
+			URLConnection connection = url.openConnection();
+//			connection.addRequestProperty("User-Agent", 
+//					"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.29 Safari/537.36");
+			InputStream is = connection.getInputStream();
+			Scanner sc = new Scanner(is);
+			String line;
+			
+			while (sc.hasNextLine()) {
+				line=sc.nextLine();
+				if (line.contains("result_id=4")) {
+					int start_index=line.indexOf("id=");
+					int mid_index=line.indexOf("&amp");
+					int last_index=line.indexOf("'>");
+					int end_index=line.indexOf("</a>");
+					start_index+=3;
+					System.out.println(line.substring(last_index+2,end_index));
+					System.out.println(line.substring(start_index, mid_index));
+					
+					break;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+		/*
+		 * Get input ended..
+		 */
+	}
+}
+
+
